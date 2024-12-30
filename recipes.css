@@ -1,0 +1,274 @@
+html,
+body {
+
+  font-family: 'DM Sans', sans-serif;
+
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fa-bowl-rice {
+  color: #d9534f;
+  /* Tomato color for the logo */
+  font-size: 2rem;
+  /* Optional: adjust the size to match */
+  margin-left: 3px;
+  /* Add some spacing between DISHES and the icon */
+}
+
+nav {
+  background: #000;
+  height: 80px;
+  width: 100%;
+}
+
+.brand-logo {
+  font-size: 33px;
+}
+
+label.logo {
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+  z-index: 10000;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #111;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 22px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  label.logo {
+    padding-left: 30px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Responsive media query code for small screen */
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+
+  label.logo {
+    font-size: 22px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #d9534f;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+main {
+  background-color: rgb(7, 7, 7);
+  padding: 0 10px;
+
+}
+
+/* Cards */
+.card {
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  image-orientation: from-image;
+  border-radius: 5%;
+}
+
+.dish-dropdown {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.dish-dropdown summary {
+  font-size: 1rem;
+  color: #d9534f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dish-dropdown summary:hover {
+  color: #ffffff;
+}
+
+.dish-dropdown ul {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.dish-dropdown ul li {
+  margin-bottom: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.dish-dropdown ul li:hover {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+
+summary {
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #d9534f;
+  /* Neutral color for text */
+}
+
+summary:hover {
+  color: rgb(255, 255, 255);
+  /* Highlight color */
+}
+
+ul {
+  padding-left: 20px;
+
+  animation: slideIn 1.2s ease;
+  /* Smooth slide-in animation */
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #333;
+  /* Neutral default color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+  color: #ff4500;
+  /* Highlight color on hover */
+  transform: translateX(10px);
+  /* Subtle slide effect */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #d9534f;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+  size: 50%;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000;
+  /* Footer background color */
+  color: white;
+  /* Footer text color */
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  /* Adds a fixed gap above the footer */
+  padding: 20px 0;
+  /* Adds padding inside the footer */
+}
+
+@media (max-width: 890px) {
+  main {
+    border-top: 1px solid #333;
+  }
+
+  .recipe-cls {
+    margin: 0 !important;
+    padding: 50px 20px;
+  }
+}
